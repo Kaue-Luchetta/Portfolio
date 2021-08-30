@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio</title>
+<link href="mycss.css" rel="stylesheet" type="text/css">
+<!-- FONT IMPORT -->
+	
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+							 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,900&display=swap" rel="stylesheet"> 
+<!-- FONT IMPORT -->
+</head>
+
+<body>	
+<!-- NAVBAR -->
+	
+	<div id="navid" class="navbar nav-col-2">
+		<a class="navlinks">Home</a>					<span class="span-div">|</span>
+		<a class="navlinks">About</a>					<span class="span-div">|</span>
+		<a class="navlinks">Media</a>					<span class="span-div">|</span>
+		<a class="navlinks">Softwares</a>				<span class="span-div">|</span>
+		<a class="navlinks">XP</a>						<span class="span-div"></span>
+	</div>
+	<div id="backid" class="backnav nobg"></div>
+<!-- TITLE CONTENT -->
+	<div class="content-1">
+		<div class="text-1">Meu portfólio</div>	
+		<div style="height: 300px;"></div>
+	</div>
+<!-- TITLE CONTENT -->
+	<div class="content-2">
+		<div class="blog-header-1">Place Holder</div>
+		<div style="height: 50px;"></div>
+		<div class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+	<div style="height: 100px;"></div>
+	
+	<div style="padding: 0vw 10vw 0vw 10vw">
+		<div id="image-slider" class="splide">
+		<div class="splide__track center">
+			<ul class="splide__list">
+				<li class="splide__slide">
+					<img src="https://img.itch.zone/aW1nLzU3NDQyODQucG5n/original/eEPbiW.png">
+				</li>
+				<li class="splide__slide">
+					<img src="">
+				</li>
+				<li class="splide__slide">
+					<img src="https://img.itch.zone/aW1nLzU3NDQ4OTcucG5n/original/2yGRwJ.png">
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	
+	<div style="height: 200px;"></div>
+	<!-- BACKGROUND -->
+	<div class="diag-back-1" ></div>
+	<div class="diag-back-2" ></div>
+<!-- SCRIPT -->
+	<script>
+	document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '.splide' ).mount();
+	} );
+		
+	
+	</script>
+	
+	<script>
+		myID = document.getElementById("navid");
+		newID = document.getElementsByClassName("navlinks");
+		menuDIV = document.getElementById("backid");
+		
+		var r = document.querySelector(':root');
+
+		var myScrollFunc = function() {
+			  var y = window.scrollY;
+			  if (y >= 350) {
+				myID.className = "navbar nav-col-1";				
+				r.style.setProperty('--theme_one', 'var(--theme_switch_2)');
+				menuDIV.className = "backnav wtbg";
+			    
+			  } 
+			  else {
+				myID.className = "navbar nav-col-2";
+				r.style.setProperty('--theme_one', 'var(--theme_switch_1)');
+			    menuDIV.className = "backnav nobg";
+			  }
+				
+			};
+		
+		window.addEventListener("scroll", myScrollFunc);
+	</script>
+
+</body>
+</html>
